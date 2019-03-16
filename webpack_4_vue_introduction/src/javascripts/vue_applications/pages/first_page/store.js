@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-import textFieldUnit from './modules/textFieldUnit'
+import textFieldUnit from '@/javascripts/vue_applications/common/modules/textFieldUnit'
 
 const state = () => {
 

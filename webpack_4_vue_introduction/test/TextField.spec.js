@@ -1,10 +1,10 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
 // modules
-import textFieldUnit from '@/vue_applications/modules/textFieldUnit.js'
-import textField from '@/vue_applications/modules/textField.js'
+import textFieldUnit from '@/javascripts/vue_applications/common/modules/textFieldUnit.js'
+import textField from '@/javascripts/vue_applications/common/modules/textField.js'
 // components
-import TextField from '@/vue_applications/components/TextField.vue'
+import TextField from '@/javascripts/vue_applications/common/components/TextField.vue'
 
 const localVue = createLocalVue()
 

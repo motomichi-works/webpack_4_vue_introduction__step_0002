@@ -3,11 +3,18 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
   // entry point
-  entry: './src/index.js',
+  entry: {
+    'javascripts/first_page': './src/javascripts/first_page.js',
+  },
   // 出力するパスは絶対パスで書きます
   output: {
-    path: `${__dirname}/webroot/javascripts/packed`,
-    filename: 'bundle.js'
+    path: `${__dirname}/webroot/packed`,
+    filename: (arg) => {
+      console.log('======================================')
+      console.log(arg.chunk.id)
+
+      return '[name].bundle.js'
+    },
   },
   // webpack4はlordersではなくなりました
   module: {
@@ -40,6 +47,8 @@ module.exports = {
     // importするときに省略できる拡張子の設定
     extensions: ['.js', '.vue'],
     alias: {
+      // importのファイルパスを相対パスで書かないようにsrcのrootを設定
+      '@': path.join(__dirname, 'src'),
       // 例えばmain.js内で `import Vue from 'vue';` と記述したときの`from vue`が表すファイルパスを指定
       'vue$': 'vue/dist/vue.esm.js'
     },

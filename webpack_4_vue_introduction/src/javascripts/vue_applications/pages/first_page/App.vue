@@ -6,7 +6,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import TextFieldUnit from './components/TextFieldUnit'
+import TextFieldUnit from '@/javascripts/vue_applications/common/components/TextFieldUnit'
 export default {
   name: 'app',
   components: {

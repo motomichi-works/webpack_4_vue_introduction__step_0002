@@ -9,7 +9,7 @@
 <script>
 import { mapState, mapGetters, mapActions, mapMutations } from 'vuex';
 
-import TextField from './TextField';
+import TextField from '@/javascripts/vue_applications/common/components/TextField';
 export default {
   name: 'TextFieldUnit',
   components: {
